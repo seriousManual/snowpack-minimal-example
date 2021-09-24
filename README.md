@@ -1,24 +1,9 @@
-# New Project
+# Reproduce an error where referenced JSON files are bundled incorrectly in prod build
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
-
-## Available Scripts
-
-### npm start
-
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+* `git clone https://github.com/seriousManual/snowpack-minimal-example`
+* `cd snowpack-minimal-example && npm i`
+* verify that the value from the json file is correctly displayed in dev mode (`npx snowpack dev`)
+* run `npx snowpack build`
+* in the resulting build output the content of the json file is not bundled but rather referenced as an external file with a wrong path. 
+  Besides the fact that I'd expect the json file to be bundled, the path to the json file is not correct, instead of `import hepp from "../public/hepp.json";` the following would be correct: `import hepp from "./public/hepp.json";`
+  [Wrong build output](/build/index.js)

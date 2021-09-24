@@ -1,2 +1,3 @@
-/* Add JavaScript code here! */
-console.log('Hello World! You did it! Welcome to Snowpack :D');
+import App from "./components/App.svelte";
+
+new App({ target: document.body })

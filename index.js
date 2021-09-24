@@ -1,3 +1,3 @@
-import App from "./components/App.svelte";
+import getHepp from './lib/getHepp'
 
-new App({ target: document.body })
+console.log('json value from json file: ' + getHepp())

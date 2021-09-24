@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../build/lib/getHepp.js", "../build/index.js"],
+  "sourcesContent": ["import hepp from '../public/hepp.json'\n\nexport default function getHepp() {\n    return hepp.foo\n}", "import getHepp from './lib/getHepp.js'\n\nconsole.log('json value from json file: ' + getHepp())"],
+  "mappings": ";AAAA;AAEe,mBAAmB;AAC9B,SAAO,KAAK;AAAA;;;ACDhB,QAAQ,IAAI,gCAAgC;",
+  "names": []
+}

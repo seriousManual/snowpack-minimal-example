@@ -4,7 +4,6 @@ export default {
     /* ... */
   },
   plugins: [
-    '@snowpack/plugin-svelte'
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
